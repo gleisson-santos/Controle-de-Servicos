@@ -6,7 +6,7 @@
    
    
    
-   
+   ```python
     layout = [      
         
         [sg.Text('Informe os dados e Tipo do Serviço Executado')],
@@ -19,13 +19,13 @@
         [sg.Text('Priorizar',         size=(15, 1)), sg.InputText(key="priorizar")],
         [sg.Button('Adicionar Novo'), sg.Exit('Sair')]
     ]
- 
+ ```
  
  
  ![image](https://user-images.githubusercontent.com/33934341/195911171-40809fe1-cb6f-4c2c-949e-08752782269e.png)
 
 
-
+```python
 #Tratativa da planilha com Pandas
 
 df = pd.DataFrame(lista_df, columns=["Tipo do Pavimento", "Equipe", "Data Lançamento", "Metragem_1x", "Metragem_2x", "Priorizar"])
@@ -38,3 +38,4 @@ df['Atraso'] = df['Data Atual'] - df['Data Lançamento']                        
 append_df_to_excel(df, r"Cadastro.xlsx")
 
 janela.close()
+```
